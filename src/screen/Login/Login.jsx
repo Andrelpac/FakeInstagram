@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, TouchInput} from 'react-native';
+import {Text, View} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import Button from '../../components/Button/Button';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const Login = ({navigation}) => {
   const [password, setPassword] = useState();
   const [login, setLogin] = useState();
-  const [text, setText] = useState();
 
   const onPressLogin = () => {
     if (login == 'Andre' && password == 'Andre') {
@@ -24,7 +23,7 @@ const Login = ({navigation}) => {
   };
   return (
     <>
-      <View style={{marginBottom: 150}}>
+      <View style={{marginBottom: 140}}>
         <Text style={{textAlign: 'center'}}>Português(Brasil)</Text>
       </View>
       <View
@@ -32,8 +31,15 @@ const Login = ({navigation}) => {
           flex: 1,
           alignItems: 'center',
         }}>
-        <View style={{marginBottom: 50}}>
-          <Text style={{fontSize: 50}}>Instagram </Text>
+        <View style={{marginBottom: 50, width: 350}}>
+          <Text
+            style={{
+              textAlign: 'center',
+              fontSize: 50,
+              fontFamily: 'BillyanaPersonalUseOnly',
+            }}>
+            Instagram
+          </Text>
         </View>
         <View style={{backgroundColor: 'white', marginBottom: 15}}>
           <TextInput
@@ -42,7 +48,7 @@ const Login = ({navigation}) => {
               width: 350,
               borderColor: 'gray',
               borderWidth: 1,
-              backgroundColor: 'lightgray',
+              backgroundColor: 'white',
               borderRadius: 10,
             }}
             onChangeText={handleChangeLogin}
@@ -58,7 +64,7 @@ const Login = ({navigation}) => {
               width: 350,
               borderColor: 'gray',
               borderWidth: 1,
-              backgroundColor: 'lightgray',
+              backgroundColor: 'white',
               borderRadius: 10,
             }}
             secureTextEntry={true}
@@ -85,7 +91,7 @@ const Login = ({navigation}) => {
         <View>
           <Text>Forgot your login details? Get help signing in.</Text>
         </View>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', marginBottom: 15}}>
           <View
             style={{
               marginTop: 50,
@@ -110,6 +116,18 @@ const Login = ({navigation}) => {
               width: 150,
             }}
           />
+        </View>
+        <View style={{flexDirection: 'row', marginBottom: 180}}>
+          <Icon name="facebook-square" color="blue" size={20} />
+          <Text style={{marginLeft: 10, color: 'blue'}}>
+            Log in with Facebook
+          </Text>
+        </View>
+        <View style={{borderTopWidth: 1, width: 600}}>
+          <Text style={{textAlign: 'center'}}>
+            {' '}
+            Don't have an account? Sing Up.
+          </Text>
         </View>
       </View>
     </>

@@ -18,7 +18,7 @@ const CardComponent = () => {
         <Left>
           <Thumbnail
             style={{width: 40, height: 40, borderRadius: 40 / 2}}
-            source={require('../../assents/img/Foto.png')}
+            source={require('../../assents/img/Foto1.png')}
           />
           <Body>
             <Text>André</Text>
@@ -31,7 +31,7 @@ const CardComponent = () => {
       <CardItem>
         <Image
           source={require('../../assents/img/Kazoku.jpg')}
-          style={{height: 200, width: null, flex: 1}}
+          style={{height: 300, width: null, flex: 1}}
         />
       </CardItem>
       <CardItem>
@@ -43,9 +43,14 @@ const CardComponent = () => {
             <Icon size={20} name="comment-o" />
           </Button>
           <Button transparent>
-            <Icon size={20} name="send" />
+            <Icon size={20} name="paper-plane-o" />
           </Button>
         </Left>
+        <Right>
+          <Button transparent>
+            <Icon size={20} name="bookmark-o" />
+          </Button>
+        </Right>
       </CardItem>
       <CardItem style={{height: 20}}>
         <Text>101 likes</Text>

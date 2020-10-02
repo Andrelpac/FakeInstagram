@@ -10,7 +10,11 @@ const StackNavigator = () => {
   return (
     <>
       <Stack.Navigator screenOptions={{cardStyle: {backgroundColor: '#FFF'}}}>
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Login"
+          component={Login}
+        />
         <Stack.Screen
           name="TabNavigator"
           component={TabNavigator}
@@ -24,11 +28,12 @@ const StackNavigator = () => {
             ),
             title: 'Instagram',
             headerTitleStyle: {
-              fontWeight: 'bold',
+              fontSize: 40,
+              fontFamily: 'BillyanaPersonalUseOnly',
               textAlign: 'center',
             },
             headerRight: () => (
-              <Icon name="paper-plane" size={30} style={{paddingRight: 10}} />
+              <Icon name="paper-plane-o" size={30} style={{paddingRight: 10}} />
             ),
           }}
         />

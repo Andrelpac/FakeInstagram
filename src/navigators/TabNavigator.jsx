@@ -24,6 +24,8 @@ const TabNavigator = () => {
             iconName = focused ? 'plus-square' : 'plus-square';
           } else if (route.name == 'Curtir') {
             iconName = focused ? 'heart-o' : 'heart-o';
+          } else if (route.name == 'Perfil') {
+            iconName = focused ? 'user' : 'user';
           }
 
           // You can return any component that you like here!
