@@ -2,7 +2,7 @@ const {StyleSheet} = require('react-native');
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#269e3e',
+    backgroundColor: '#262e3e',
     marginHorizontal: 20,
     marginTop: 20,
     padding: 15,
